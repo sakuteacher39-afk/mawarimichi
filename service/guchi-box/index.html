@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="愚痴、不満、弱音。誰にも読まれない場所へ、置いていくための投函箱です。">
+  <title>本日の愚痴投函箱｜株式会社廻り道</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="./guchi-box.css">
+  <script src="./guchi-box.js" defer></script>
+</head>
+<body class="guchi-page">
+<header class="site-header guchi-header">
+  <a class="brand" href="../../">株式会社廻り道</a>
+  <a class="back-link" href="../../#service">公式サイトへ戻る</a>
+</header>
+<main id="top">
+  <section class="guchi-hero">
+    <p class="eyebrow">MAWARIMICHI SERVICE 01</p>
+    <h1>本日の<br>愚痴投函箱</h1>
+    <p class="guchi-lead">今日ここに置いていきたいものを、<br>ひとつどうぞ。</p>
+  </section>
+
+  <section class="guchi-form-section" aria-labelledby="form-title">
+    <form id="guchi-form" novalidate>
+      <fieldset class="kind-fieldset">
+        <legend id="form-title">今日は何を置いていきますか？</legend>
+        <div class="kind-options">
+          <label><input type="radio" name="kind" value="愚痴"><span>愚痴</span></label>
+          <label><input type="radio" name="kind" value="不満"><span>不満</span></label>
+          <label><input type="radio" name="kind" value="弱音"><span>弱音</span></label>
+          <label><input type="radio" name="kind" value="その他"><span>その他</span></label>
+        </div>
+        <p class="field-error" id="kind-error" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="other-field" id="other-field" hidden>
+        <label for="other-text">何を置いていきますか？</label>
+        <input id="other-text" name="other" type="text" maxlength="80" autocomplete="off">
+        <p class="field-error" id="other-error" aria-live="polite"></p>
+      </div>
+
+      <div class="detail-field">
+        <label for="detail">ここに置いていってください。<br><span>きれいにまとめなくても大丈夫です。</span></label>
+        <textarea id="detail" name="detail" maxlength="1000" rows="10" autocomplete="off"></textarea>
+        <div class="detail-meta"><p class="field-error" id="detail-error" aria-live="polite"></p><span id="char-count" aria-live="polite">0 / 1000</span></div>
+      </div>
+
+      <aside class="privacy-note" aria-label="入力内容について">
+        <h2>この投函箱について</h2>
+        <p>入力した内容は、このページの中だけで処理されます。<br>外部への送信・保存は行いません。<br>株式会社廻り道を含め、誰かが内容を読むこともありません。<br>名前を書く必要もありません。</p>
+      </aside>
+
+      <button class="post-button" type="submit">投函する</button>
+    </form>
+  </section>
+
+  <section class="drop-stage" id="drop-stage" aria-hidden="true">
+    <div class="paper" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="postbox" aria-hidden="true"><div class="slot"></div><div class="box-label">本日の<br>愚痴投函箱</div></div>
+  </section>
+</main>
+
+<div class="receipt" id="receipt" role="dialog" aria-modal="true" aria-labelledby="receipt-title" hidden>
+  <div class="receipt-panel">
+    <p class="eyebrow">RECEIVED</p>
+    <h2 id="receipt-title">投函ありがとうございました。</h2>
+    <div class="receipt-copy">
+      <p>あなたがここに置いていったものは、これでおしまいです。</p>
+      <p>入力した内容はどこにも送信されず、保存もされません。<br>株式会社廻り道を含め、誰かが読むこともありません。</p>
+      <p>解決しなくても、前向きにならなくても構いません。<br>とりあえず今日は、ここに置いていってください。</p>
+      <p>また何か溜まったら、いつでもどうぞ。</p>
+    </div>
+    <button id="close-receipt" class="close-button" type="button">閉じる</button>
+  </div>
+</div>
+
+<footer class="guchi-footer"><a href="../../">株式会社廻り道</a><p>誰にも届かない投函箱です。</p></footer>
+</body>
+</html>

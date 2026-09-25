@@ -11,3 +11,4 @@
   .company-table div{grid-template-columns:145px 1fr}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+.service-link{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding-bottom:5px;border-bottom:1px solid var(--ink);font-size:12px;letter-spacing:.12em}.service-link span{transition:transform .2s}.service-link:hover span{transform:translateX(5px)}

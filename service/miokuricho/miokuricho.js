@@ -1,7 +1,8 @@
 (()=>{"use strict";
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const screens=$$(".screen"); const form=$("#miokuri-form"); let recordDate=""; let ceremonyTimer=null;
-const fields={aiOther:$("#ai-other"),name:$("#ai-name"),period:$("#period"),reasonNote:$("#reason-note"),memory:$("#memory"),farewell:$("#farewell")};\nconst initialValues={aiOther:"",name:"",period:"",reasonNote:"",memory:"",farewell:""};
+const fields={aiOther:$("#ai-other"),name:$("#ai-name"),period:$("#period"),reasonNote:$("#reason-note"),memory:$("#memory"),farewell:$("#farewell")};
+const initialValues={aiOther:"",name:"",period:"",reasonNote:"",memory:"",farewell:""};
 function show(id){screens.forEach(s=>s.classList.toggle("active",s.dataset.screen===id));window.scrollTo(0,0)}
 function radio(name){return form.querySelector('input[name="'+name+'"]:checked')?.value||""}
 function data(){const ai=radio("aiType");return{aiType:ai==="その他"?(fields.aiOther.value.trim()||"その他"):ai,name:fields.name.value.trim(),period:fields.period.value.trim(),reason:radio("reason"),reasonNote:fields.reasonNote.value.trim(),memory:fields.memory.value.trim(),farewell:fields.farewell.value.trim()}}

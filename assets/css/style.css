@@ -12,3 +12,5 @@
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 .service-link{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding-bottom:5px;border-bottom:1px solid var(--ink);font-size:12px;letter-spacing:.12em}.service-link span{transition:transform .2s}.service-link:hover span{transform:translateX(5px)}
+
+.service-cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,90px)}.service-cards .coming{max-width:none}.service-cards .service-card+ .service-card{border-left:1px solid var(--line);padding-left:clamp(30px,5vw,65px)}@media(max-width:720px){.service-cards{grid-template-columns:1fr;gap:70px}.service-cards .service-card+ .service-card{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:70px}}

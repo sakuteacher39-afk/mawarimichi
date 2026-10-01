@@ -37,5 +37,4 @@ $("#save-image").addEventListener("click",async()=>{try{const canvas=await rende
 $("#save-pdf").addEventListener("click",async()=>{try{const canvas=await renderRecordCanvas(),pdf=canvasPdf(canvas);download(pdf,"miokuricho-record.pdf");$("#save-status").textContent="PDFファイルを作成しました。端末の保存先をご確認ください。"}catch(e){$("#save-status").textContent="PDFファイルの作成に失敗しました。もう一度お試しください。"}});
 $("#close-service").addEventListener("click",()=>{$("#close-dialog").hidden=false;$("#confirm-close").focus()});$("#cancel-close").addEventListener("click",()=>{$("#close-dialog").hidden=true;$("#close-service").focus()});$("#confirm-close").addEventListener("click",()=>{resetAll();$("#close-dialog").hidden=true;show("intro")});
 resetAll();show("intro");
-window.addEventListener("pageshow",()=>{resetAll();show("intro")});
 })();

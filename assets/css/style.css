@@ -3,6 +3,7 @@
 
 /* Landscape/tablet: preserve typography and whitespace, give copy more horizontal room. */
 @media (orientation:landscape) and (min-width:721px) and (max-width:1200px){
+  .landscape-keep{white-space:nowrap}
   .section-grid{grid-template-columns:.72fr 1.73fr;gap:5vw}
   .section-heading{display:grid;grid-template-columns:.72fr 1.73fr;gap:5vw}
   .section-heading>p{max-width:none}
